@@ -232,6 +232,15 @@ config DT_SF16A18_FULLMASK_CPE
 	  This DTB will be used if the firmware does not pass in a DTB
 	  pointer to the kernel.  The corresponding DTS file is at
 	  arch/mips/boot/dts/sf16a18_fullmask_cpe.dts
+config DT_SF16A18_FULLMASK_OTT
+        bool "Built-in device tree for sf16a18 full mask ott boards"
+        default n
+        select BUILTIN_DTB
+        help
+          Add an FDT blob for XLP EVP boards into the kernel.
+          This DTB will be used if the firmware does not pass in a DTB
+          pointer to the kernel.  The corresponding DTS file is at
+	  arch/mips/boot/dts/sf16a18_fullmask_ott.dts	
 
 endif #SF16A18_FULL_MASK
 

@@ -31,6 +31,7 @@ dtb-$(CONFIG_DT_SF16A18_FULLMASK_P20)	+= sf16a18_fullmask_p20.dtb
 dtb-$(CONFIG_DT_SF16A18_FULLMASK_ACCTL)	+= sf16a18_fullmask_ac.dtb
 dtb-$(CONFIG_DT_SF16A18_FULLMASK_EVB_V5)	+= sf16a18_fullmask_evb_v5.dtb
 dtb-$(CONFIG_DT_SF16A18_FULLMASK_CPE)	+= sf16a18_fullmask_cpe.dtb
+dtb-$(CONFIG_DT_SF16A18_FULLMASK_OTT)  += sf16a18_fullmask_ott.dtb
 
 obj-y		+= $(patsubst %.dtb, %.dtb.o, $(dtb-y))
 

@@ -130,6 +130,9 @@ case ${board} in
 	cpe)
 		target_board=target/linux/siflower/sf16a18_cpe_${chip}_def.config
 		;;
+	ott)
+                target_board=target/linux/siflower/sf16a18_ott_${chip}_16m.config
+                ;;
 	clean)
 		echo "clean build enviroment"
 		echo "delete build dir "
