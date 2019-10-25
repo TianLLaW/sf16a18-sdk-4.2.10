@@ -1766,7 +1766,12 @@ function get_wan_type()
 	local code = 0
 	local proto   = uci:get("network","wan","proto")
 	if(proto == "dhcp") then
-		result["type"] = 0
+					 
+					
+		result["type"] 	  = 0
+		result["ip"]      = luci.util.exec("ifconfig eth1 | grep 'inet addr' | awk '{ print $2}' | awk -F: '{print $2}' | xargs echo -n")
+        result["mask"]    = luci.util.exec("ifconfig eth1 | grep 'inet addr' | awk '{ print $4}' | awk -F: '{print $2}' | xargs echo -n")
+        result["gateway"] = luci.util.exec("ubus call network.interface.wan status | grep nexthop | grep -oE '([0-9]{1,3}.){3}.[0-9]{1,3}.[0-9]{1,3}' | xargs echo -n")
 	elseif(proto == "pppoe") then
 		result["type"]    = 1
 		result["pppname"] = uci:get("network","wan","username")
