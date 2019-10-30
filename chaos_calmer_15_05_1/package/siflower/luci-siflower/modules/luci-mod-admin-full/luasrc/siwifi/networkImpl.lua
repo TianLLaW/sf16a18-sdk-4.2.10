@@ -1797,6 +1797,7 @@ function get_wan_type()
 			end
 		else
 			result["autodns"] = 1
+			result["dns"] = luci.util.exec("cat /etc/resolv.conf | grep 'nameserver' | awk -F' ' '{print $2}' | awk 'NR==1' | xargs echo -n")
 		end
 	end
 	return code, result

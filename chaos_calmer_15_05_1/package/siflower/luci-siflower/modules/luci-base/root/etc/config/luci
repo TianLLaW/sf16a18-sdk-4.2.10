@@ -1,5 +1,5 @@
 config core main
-	option lang zh_cn
+	option lang en
 	option mediaurlbase /luci-static/siwifi.org
 	option resourcebase /luci-static/resources
 	
