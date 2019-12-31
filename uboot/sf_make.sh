@@ -23,7 +23,7 @@ custom_ddr="0"
 
 show_help() {
 	echo "Usage: $0"
-	echo "    prj=p10[b/m/flash]|p20[b]|wrt|evb|86v|ac|x10|p10h|evb_v5|air001|cpe|ott_router"
+	echo "    prj=p10[b/m/flash]|p20[b]|wrt|evb|86v|ac|x10|p10h|evb_v5|air001|cpe|ott"
 	echo "    ver=mpw0|mpw1|fullmask"
 	echo "    mode=r|d"
 	echo "    [cmd=dmake|distclean|clean|make]"
@@ -181,7 +181,7 @@ case $prj in
 		DEFCONFIG="sfa18_"$ver"_p20b"
 		[ -z $ddr3 ] && ddr3=m15t1g1664a
 		;;
-	ott_router)
+	ott)
 		DEFCONFIG="sfa18_"$ver"_p10h"
 		[ -z $ddr2 ] && ddr2=m14d5121632a
 		;;

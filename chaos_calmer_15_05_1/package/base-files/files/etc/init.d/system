@@ -78,7 +78,7 @@ EOF
 			[ -e /www/cgi-bin/first.lua ] && uci add_list dhcp.@dnsmasq[0].address="/#/$alias_ip"
 			uci commit dhcp
 		else
-			uci set uhttpd.main.index_page='cgi-bin/luci'
+			uci set uhttpd.main.index_page='cgi-bin/test.lua'
 			uci commit uhttpd
 			rm -f /www/cgi-bin/first.lua
 		fi
