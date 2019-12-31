@@ -173,6 +173,22 @@ ifneq ($(findstring OTT,$(PROFILE)),)
     __config_name_list = $(1)/config-$(KERNEL_PATCHVER)_ott $(1)/config-default
 endif
 
+ifneq ($(findstring AC20-REALTEK,$(PROFILE)),)
+    __config_name_list = $(1)/config-$(KERNEL_PATCHVER)_ac20_realtek $(1)/config-default
+endif
+
+ifneq ($(findstring AC20-SJBY,$(PROFILE)),)
+    __config_name_list = $(1)/config-$(KERNEL_PATCHVER)_ac20_realtek $(1)/config-default
+endif
+
+ifneq ($(findstring AC20-INTEL,$(PROFILE)),)
+    __config_name_list = $(1)/config-$(KERNEL_PATCHVER)_ac20_intel $(1)/config-default
+endif
+
+ifneq ($(findstring AC20-FEIXUN,$(PROFILE)),)
+    __config_name_list = $(1)/config-$(KERNEL_PATCHVER)_ac20_realtek $(1)/config-default
+endif
+
 __config_list = $(firstword $(wildcard $(call __config_name_list,$(1))))
 find_kernel_config=$(if $(__config_list),$(__config_list),$(lastword $(__config_name_list)))
 
