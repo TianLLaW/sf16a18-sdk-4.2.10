@@ -64,6 +64,8 @@ get_ddr_size() {
 			size=0x4000000;;
 		ct54v321601a)
 			size=0x4000000;;
+		mt47h64m16)
+			size=0x8000000;;
 	esac
 
 	case $ddr3 in
@@ -187,7 +189,7 @@ case $prj in
 		;;
 	ott)
 		DEFCONFIG="sfa18_"$ver"_p10h"
-		[ -z $ddr2 ] && ddr2=m14d5121632a
+		[ -z $ddr2 ] && ddr2=mt47h64m16
 		;;
 	air001)
 		DEFCONFIG="sfa18_"$ver"_air001"
