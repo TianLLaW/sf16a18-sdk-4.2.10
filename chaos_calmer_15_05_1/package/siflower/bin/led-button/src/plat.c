@@ -11,6 +11,7 @@ struct board_name bd_name[] = {
 	{ BOARD_6, "sf16a18-p10" },
 	{ BOARD_7, "sf16a18-86v-c2" },
 	{ BOARD_8, "sf16a18-rep-nopa" },
+	{ BOARD_9, "sf16a18-ott" },
 	{ BOARD_MAX, "none" }, /* Ending flags. */
 };
 

@@ -19,6 +19,7 @@ enum {
 	BOARD_6, /* SF16A18_ZEGBEE_BLE */
 	BOARD_7, /* SF16A18_86V_C2 */
 	BOARD_8, /* SF16A18_REPEATER_NOPA */
+	BOARD_9, /* SF16A18_OTT */
 	BOARD_MAX, /* not used */
 };
 
